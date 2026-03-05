@@ -4,6 +4,7 @@ import {ButtonToolbar, Button, Modal} from 'react-bootstrap';
 import store from '../store/store.js';
 import {importModalControl, fileImport} from '../reducers/pager.js';
 import splitPb from '../processor/splitPb.js';
+import i18n from '../i18n.js';
 
 class DataImportContainer extends Component {
   doImportModalControl(mode) {
@@ -39,23 +40,23 @@ class DataImportContainer extends Component {
     return (
       <div id="importer">
         <ButtonToolbar>
-          <Button id="importButton" onClick={() => {this.doImportModalControl('open');}}>import</Button>
+          <Button id="importButton" onClick={() => {this.doImportModalControl('open');}}>{i18n.import}</Button>
         </ButtonToolbar>
         <div id="importModal" className={modalDisplay}>
           <Modal.Dialog>
             <Modal.Header>
-              <Modal.Title>Modal title</Modal.Title>
+              <Modal.Title>{i18n.importModalTitle}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <h5>Old Text:</h5>
+              <h5>{i18n.oldText}:</h5>
               <input type="file" id="oldFileImport" onChange={this.dataImport} />
-              <h5>New Text:</h5>
+              <h5>{i18n.newText}:</h5>
               <input type="file" id="newFileImport" onChange={this.dataImport} />
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={() => {this.doImportModalControl('remove');}}>Remove Import</Button>
-              <Button onClick={() => {this.doImportModalControl('cancel');}}>Cancel</Button>
-              <Button bsStyle="primary" onClick={() => {this.doImportModalControl('import');}}>Import</Button>
+              <Button onClick={() => {this.doImportModalControl('remove');}}>{i18n.removeImport}</Button>
+              <Button onClick={() => {this.doImportModalControl('cancel');}}>{i18n.cancel}</Button>
+              <Button bsStyle="primary" onClick={() => {this.doImportModalControl('import');}}>{i18n.import}</Button>
             </Modal.Footer>
           </Modal.Dialog>
         </div>

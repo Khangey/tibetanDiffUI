@@ -4,6 +4,7 @@ import ThemeSelector from './ThemeSelector.js';
 import DataImport from './DataImport.js';
 import {connect} from 'react-redux';
 import Diff from './Diff.js';
+import i18n from '../i18n.js';
 
 class AppContainer extends Component {
   render() {
@@ -11,7 +12,7 @@ class AppContainer extends Component {
       <div id="theme" className={this.props.themeStyle}>
         <header id="logoArea">
           <span>
-            <div id="logoTitle">色鼎經文比對系統</div>
+            <div id="logoTitle">{i18n.appTitle}</div>
           </span>
           <div id="titleRight">
             <PageSelector />

@@ -49,6 +49,10 @@ module.exports = {
         ]
       },
       {
+        test: /\.(ttf|otf|woff|woff2)$/,
+        loader: 'file?name=fonts/[name].[ext]'
+      },
+      {
         test: /\.html$/,
         loader: "file-loader?name=[name].[ext]",
       }

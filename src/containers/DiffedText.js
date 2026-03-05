@@ -4,6 +4,7 @@ import store from '../store/store.js';
 import {closeDiffedText} from '../reducers/pager.js';
 import * as JsDiff from 'diff';
 import Resizable from 'react-resizable-box';
+import i18n from '../i18n.js';
 
 class DiffedTextContainer extends Component {
   diff(oldText, newText) {
@@ -66,7 +67,7 @@ class DiffedTextContainer extends Component {
       if ((2 === this.props.pager.openPane && this.props.pager.paneOldText) || 1 === this.props.pager.openPane){
         return (
           <span id="diffedRender">
-            <div id="diffedTitle" onClick={this.paneClose}>Diffed-</div>
+            <div id="diffedTitle" onClick={this.paneClose}>{i18n.diffed}-</div>
             <div id="diffedText">{output}</div>
           </span>
         );
@@ -74,7 +75,7 @@ class DiffedTextContainer extends Component {
         return (
           <Resizable width="33%" minWidth={100} height="100%" isResizable={{top:false, right:false, bottom:false, left:resizable, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false}}>
             <span id="diffedRender">
-                <div id="diffedTitle" onClick={this.paneClose}>Diffed-</div>
+                <div id="diffedTitle" onClick={this.paneClose}>{i18n.diffed}-</div>
               <div id="diffedText">{output}</div>
             </span>
           </Resizable>
@@ -82,7 +83,7 @@ class DiffedTextContainer extends Component {
       }
     } else {
       return (
-        <span className="titleClose" onClick={this.paneClose}>+Diffed</span>
+        <span className="titleClose" onClick={this.paneClose}>+{i18n.diffed}</span>
       );
     }
   }
