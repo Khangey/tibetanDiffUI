@@ -11,7 +11,7 @@ class AppContainer extends Component {
       <div id="theme" className={this.props.themeStyle}>
         <header id="logoArea">
           <span>
-            <div id="logoTitle">經文比對系統</div>
+            <div id="logoTitle">色鼎經文比對系統</div>
           </span>
           <div id="titleRight">
             <PageSelector />
