@@ -1,0 +1,466 @@
+/* header */
+#theme {
+  height: 100vh;
+}
+
+#logoArea {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  padding-top: 0em;
+  padding-left: 0.5em;
+}
+
+#logoTitle {
+  padding-left: 0.32em;
+  padding-top: 0.2em;
+  font-size: 1.85em;
+}
+
+#titleRight {
+  display: inline;
+  flex: 5;
+  text-align: right;
+  padding-top: 0.4em;
+  padding-right: 1%;
+}
+
+#pageSelector {
+  display:inline;
+  padding-right: 5.8em;
+}
+
+button, #importButton, input:focus {
+  outline: none;
+}
+
+#pageInput {
+  padding-bottom: 0.24em;
+  text-align: center;
+  width: 5.6em;
+  height: 1.8em;
+  font-size: 1.3em;
+}
+/* font 13.85 */
+#pageInput.notWarn {
+  color: black;
+}
+
+#pageInput.warn {
+  color: #FF4949;
+}
+
+#pageSelectLeft, #pageSelectRight {
+  width: 2.45em;
+  height: 2.31em;
+}
+
+#importer {
+  display: inline;
+}
+
+.btn-toolbar {
+  display: inline;
+  padding-left: 1em;
+}
+
+#importButton {
+  float: unset;
+}
+
+#importModal {
+  text-align: left;
+}
+
+.modalOpen {
+
+}
+
+.modalClose {
+  display: none;
+}
+
+#oldFileImport, #newFileImport {
+  padding-bottom: 1em;
+}
+
+#themeSelector {
+  height: 2.45em;
+  width: 5.78em;
+  display:inline;
+  border-radius: 0.36em;
+}
+
+.dropdown-menu {
+  padding: 0em 0;
+  min-width: 5.78em;
+}
+
+#themeDefault {
+  height: 1.88em;
+  margin: 0.29em;
+  background-color: #FFFFFF;
+  border: 0.07em solid #DDDDDD;
+}
+
+#themeGreen {
+  height: 1.88em;
+  margin: 0.29em;
+  background-color: #D3FFBE;
+}
+
+#themeBlack {
+  height: 1.88em;
+  margin: 0.29em;
+  color: white;
+  background-color: #2B2B2B;
+}
+/* main */
+#main {
+  padding-top: 0.07em;
+  font-size: 1.19em;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 2.6em);
+}
+
+.resizeBar {
+  width: 0.1em;
+  height: 100%;
+  cursor: col-resize;
+  resize: horizontal;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+#oldRender, #newRender, #diffedRender {
+  flex: 1;
+  height: 100%;
+}
+
+.ReactCodeMirror {
+  height: calc(100% - 1.8em);
+}
+
+#oldTitle, #newTitle, #diffedTitle {
+  padding-left: 0.29em;
+  padding-top: 0.2em;
+  font-size: 1.05em;
+  height: 1.8em;
+  cursor: pointer;
+}
+
+.titleClose {
+  writing-mode: vertical-rl;
+  padding-top: 0.3em;
+  height: 100%;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+#newTitleClose {
+  height: auto;
+}
+
+.CodeMirror {
+  font-size: 1.2em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+#diffedText {
+  padding-top: 0.15em;
+  font-size: 1.2em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - 1.52em);
+}
+
+#oldTitle, .CodeMirror {
+  box-shadow: 0px 0.29em 0.14em 0 rgba(0, 0, 0, 0.1), 0 0.43em 0.22em 0 rgba(0, 0, 0, 0.09);
+}
+
+#newTitle, .CodeMirror {
+  box-shadow: 0 0.29em 0.14em 0 rgba(0, 0, 0, 0.1), 0 0.43em 0.22em 0 rgba(0, 0, 0, 0.09);
+}
+
+#diffedTitle, #diffedText {
+  box-shadow: 0.22em 0.29em 0.14em 0 rgba(0, 0, 0, 0.1), 0.22em 0.43em 0.22em 0 rgba(0, 0, 0, 0.09);
+}
+
+#diffedRender {
+  flex: 1;
+}
+
+#diffedDrawRed {
+  background: #FF4949;
+}
+/* theme default */
+#theme.themeDefault {
+  background: #FAFAFA;
+}
+
+#theme.themeDefault .CodeMirror-sizer {
+  color: #050505;
+}
+
+#theme.themeDefault #logoTitle {
+  color: #050505;
+}
+
+#theme.themeDefault #pageSelectLeft, #theme.themeDefault #pageSelectRight {
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 0.07em solid #BBBBBB;
+}
+
+#theme.themeDefault #pageSelectLeft:hover, #theme.themeDefault #pageSelectRight:hover {
+  background-color: #F7F7F7;
+}
+
+#theme.themeDefault #themeDropdown, #theme.themeDefault #importButton {
+  color: #000000;
+  background-color: #FFFFFF;
+  border-color: #BBBBBB;
+}
+
+#theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:hover, .open > #theme.themeDefault #themeDropdown:focus, #theme.themeDefault #importButton:hover, #theme.themeDefault #importButton:focus {
+  color: #000000;
+  background-color: #F7F7F7;
+  border-color: #616161;
+}
+
+#theme.themeDefault .dropdown-menu {
+  background-color: #F9F9F9;
+}
+
+#theme.themeDefault .resizeBar {
+  background: #DDDDDD;
+  border-color: #DDDDDD;
+}
+
+#theme.themeDefault #oldTitle, #theme.themeDefault #newTitle, #theme.themeDefault #diffedTitle {
+  background: #F7F7F7;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeDefault #oldTitle:hover, #theme.themeDefault #newTitle:hover, #theme.themeDefault #diffedTitle:hover {
+  background: #EBEBEB;
+}
+
+#theme.themeDefault .titleClose {
+  background: #EBEBEB;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeDefault .titleClose:hover {
+  background: #F7F7F7;
+}
+
+#theme.themeDefault .CodeMirror-gutters {
+  background: #F7F7F7;
+  border-right: 0.07em solid #DDDDDD;
+}
+
+#theme.themeDefault .CodeMirror-linenumber {
+  color: #999999;
+}
+
+#theme.themeDefault .CodeMirror, #theme.themeDefault #diffedText {
+  background: #FFFFFF;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeDefault .CodeMirror-selected { 
+  background: #D9D9D9; 
+}
+
+#theme.themeDefault .CodeMirror-focused .CodeMirror-selected { 
+  background: #AAD6FF; 
+}
+
+#theme.themeDefault #diffedDrawGreen {
+  background: #8BCE4D;
+}
+/* theme green */
+#theme.themeGreen {
+  background: #EFF2E4;
+}
+
+#theme.themeGreen .CodeMirror-sizer {
+  color: #000000;
+}
+
+#theme.themeGreen #logoTitle {
+  color: #4A8731;
+}
+
+#theme.themeGreen #pageSelectLeft, #theme.themeGreen #pageSelectRight {
+  color: #000000;
+  background-color: #F4FFEF;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeGreen #pageSelectLeft:hover, #theme.themeGreen #pageSelectRight:hover {
+  background-color: #E3EEDE;
+}
+
+#theme.themeGreen #themeDropdown, #theme.themeGreen #importButton {
+  color: #000000;
+  background-color: #F4FFEF;
+  border-color: #DDDDDD;
+}
+
+#theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:hover, .open > #theme.themeGreen #themeDropdown:focus, #theme.themeGreen #importButton:hover, #theme.themeGreen #importButton:focus {
+  color: #000000;
+  background-color: #E3EEDE;
+  border-color: #DDDDDD;
+}
+
+#theme.themeGreen .dropdown-menu {
+  background-color: #F9F9F9;
+}
+
+#theme.themeGreen .resizeBar {
+  background: #DDDDDD;
+  border-color: #DDDDDD;
+}
+
+#theme.themeGreen #oldTitle, #theme.themeGreen #newTitle, #theme.themeGreen #diffedTitle {
+  background: #F4FFEF;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeGreen #oldTitle:hover, #theme.themeGreen #newTitle:hover, #theme.themeGreen #diffedTitle:hover {
+  background: #E8F4E4;
+}
+
+#theme.themeGreen .titleClose {
+  background: #E8F4E4;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeGreen .titleClose:hover {
+  background: #F4FFEF;
+}
+
+#theme.themeGreen .CodeMirror-gutters {
+  background: #F4FFEF;
+  border-right: 0.07em solid #DDDDDD;
+}
+
+#theme.themeGreen .CodeMirror-linenumber {
+  color: #999999;
+}
+
+#theme.themeGreen .CodeMirror, #theme.themeGreen #diffedText {
+  background: #FBFFF8;
+  border: 0.07em solid #DDDDDD;
+}
+
+#theme.themeGreen .CodeMirror-selected { 
+  background: #D9D9D9; 
+}
+
+#theme.themeGreen .CodeMirror-focused .CodeMirror-selected { 
+  background: #AAD6FF; 
+}
+
+#theme.themeGreen #diffedDrawGreen {
+  background: #8BCE4D;
+}
+/* theme black */
+#theme.themeBlack {
+  background: #2B2B2B;
+}
+
+#theme.themeBlack .CodeMirror-sizer {
+  color: #DCDCBA;
+}
+
+#theme.themeBlack #main {
+  color: #DCDCBA;
+}
+
+#theme.themeBlack #logoTitle {
+  color: #DCDCBA;
+}
+
+#theme.themeBlack #pageSelectLeft, #theme.themeBlack #pageSelectRight {
+  color: #DCDCBA;
+  background-color: #666666;
+  border: 0.07em solid #333333;
+}
+
+#theme.themeBlack #pageSelectLeft:hover, #theme.themeBlack #pageSelectRight:hover {
+  background-color: #545454;
+}
+
+#theme.themeBlack #themeDropdown, #theme.themeBlack #importButton {
+  color: #DCDCBA;
+  background-color: #666666;
+  border-color: #1F1F1F;
+}
+
+#theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:hover, .open > #theme.themeBlack #themeDropdown:focus, #theme.themeBlack #importButton:hover, #theme.themeBlack #importButton:focus {
+  color: #DCDCBA;
+  background-color: #545454;
+  border-color: #1F1F1F;
+}
+
+#theme.themeBlack .dropdown-menu {
+  background-color: #555555;
+}
+
+#theme.themeBlack .resizeBar {
+  background: #2B2B2B;
+  border-color: #2B2B2B;
+}
+
+#theme.themeBlack #oldTitle, #theme.themeBlack #newTitle, #theme.themeBlack #diffedTitle {
+  background: #666666;
+  border: 0.07em solid #000000;
+}
+
+#theme.themeBlack #oldTitle:hover, #theme.themeBlack #newTitle:hover, #theme.themeBlack #diffedTitle:hover {
+  background: #545454;
+}
+
+#theme.themeBlack .titleClose {
+  background: #545454;
+  border: 0.07em solid #000000;
+}
+
+#theme.themeBlack .titleClose:hover {
+  background: #666666;
+}
+
+#theme.themeBlack .CodeMirror-gutters {
+  background: #666666;
+  border-right: 0.07em solid #333333;
+}
+
+#theme.themeBlack .CodeMirror-linenumber {
+  color: #DCDCBA;
+}
+
+#theme.themeBlack .CodeMirror, #theme.themeBlack #diffedText {
+  background: #3F3F3F;
+  border: 0.07em solid #000000;
+}
+
+#theme.themeBlack .CodeMirror-selected { 
+  background: #818593; 
+}
+
+#theme.themeBlack .CodeMirror-focused .CodeMirror-selected { 
+  background: #5D88B3; 
+}
+
+#theme.themeBlack #diffedDrawGreen {
+  background: #478A09;
+}
